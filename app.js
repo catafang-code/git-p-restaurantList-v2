@@ -29,6 +29,15 @@ app.get('/restaurants/:restaurant_id', (req,res)=>{
   res.render('show', {restaurant:restaurant})
 })
 
+// route for search 
+app.get('/search',(req,res)=>{
+  const keyword = req.query.keyword
+  const restaurants = restaurantList.results.filter(restaurant=>{
+    return restaurant.name.toLowerCase().includes(keyword.toLowerCase())
+  })
+  res.render('index', {restaurants:restaurants, keyword: keyword})
+})
+
 app.engine ('handlebars', exphbs({defaultLayout:"main"}))
 app.set('view engine', 'handlebars')
 app.use(express.static('public'))   //靜態檔案 使用 bootstrap
