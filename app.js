@@ -22,6 +22,13 @@ app.get('/', (req,res)=>{
   res.render('index', {restaurants:restaurantList.results})  //讀取與渲染 Json資料)
 })
 
+//rout for show page by using param
+app.get('/restaurants/:restaurant_id', (req,res)=>{
+  //console.log('req.params.restaurant_id',req.params.restaurant_id)
+  const restaurant = restaurantList.results.find(restaurant=>restaurant.id.toString()===req.params.restaurant_id)
+  res.render('show', {restaurant:restaurant})
+})
+
 app.engine ('handlebars', exphbs({defaultLayout:"main"}))
 app.set('view engine', 'handlebars')
 app.use(express.static('public'))   //靜態檔案 使用 bootstrap
