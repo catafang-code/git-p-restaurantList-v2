@@ -1,5 +1,8 @@
-專案介紹
-===
+![restaurantList-V2-index](https://user-images.githubusercontent.com/100117913/161391595-291ae433-b0cd-4b60-bed9-e5634404067b.png)
+![restaurantList-V2-show](https://user-images.githubusercontent.com/100117913/161391600-9f22f2cb-b043-48ae-847c-6428318ede09.png)
+
+# 專案介紹
+
 紀錄專屬「優質」餐廳清單，頁面供瀏覽與搜尋餐廳資訊
 ##### (本專案為AC 2-3 前端 課程作業實作)
 ---
@@ -28,3 +31,4 @@
 5. 若看見此行訊息則代表順利運行，打開瀏覽器進入到以下網址
 Listening on http://localhost:3000
 6. 若欲暫停使用 ctrl + c
+
